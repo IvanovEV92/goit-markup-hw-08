@@ -1,7 +1,9 @@
 .contacts-list {
-	// margin-left: auto;
-	&__item {
-		// color: $color-secondary-text;
+	&__item:first-child {
+		margin-bottom: 16px;
+	}
+	&__link {
+		color: $color-secondary-text;
 		transition-duration: 250ms;
 		transition-timing-function: cubic-bezier(0.4, 0, 0.2, 1);
 
@@ -10,16 +12,21 @@
 		transition-duration: 250ms;
 		transition-timing-function: cubic-bezier(0.4, 0, 0.2, 1);
 
-		// &:first-child {
-		// 	// margin-right: 30px;
-		// }
-		// &:hover,
-		// &:focus {
-		// 	// color: $accent;
-		// }
+		&:first-child {
+			// margin-right: 30px;
+		}
+		&:hover,
+		&:focus {
+			color: $accent;
+		}
 	}
 	&__icon {
 		fill: currentColor;
 		margin-right: 10px;
+	}
+	@media screen and (max-width: 767px) {
+		margin-top: 60px;
+		margin-bottom: 60px;
+		font-size: 18px;
 	}
 }

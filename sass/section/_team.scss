@@ -1,7 +1,9 @@
-// .team {
-// 	background-color: $color-bg-advantges;
-// 	&__members {
-		
-// 		margin-top: 50px;
-// 	}
-// }
+.team {
+	background-color: $color-bg-advantges;
+	padding-top: 60px;
+	margin-top: 60px;
+	&__members {
+		margin-top: 30px;
+	}
+	
+}

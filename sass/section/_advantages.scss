@@ -1,36 +1,33 @@
-// .advantages {
-// 	&__list {
-// 		flex-wrap: wrap;
-// 	}
-// 	&-item {
-// 		&::before {
-// 			content: '';
-// 			display: block;
+.advantages {
+	padding-top: 60px;
+	&-item {
+		&::before {
+			content: '';
+			display: block;
 
-// 			height: 120px;
-// 			margin-bottom: 30px;
-// 			border-radius: 4px;
+			height: 120px;
+			margin-bottom: 30px;
+			border-radius: 4px;
 
-// 			background-size: content;
-// 			background-repeat: no-repeat;
-// 			background-position: center;
-// 			background-color: $color-bg-advantges;
-// 		}
-		
-// 	}
-// 	&__title {
-// 		font-style: normal;
-// 		font-weight: 700;
-// 		font-size: 14px;
-// 		line-height: 1.14;
-// 		letter-spacing: 0.03em;
-// 		margin-top: 0px;
-// 		margin-bottom: 10px;
-// 	}
-// }
+			background-size: content;
+			background-repeat: no-repeat;
+			background-position: center;
+			background-color: $color-bg-advantges;
+		}
+	}
+	&__title {
+		font-style: normal;
+		font-weight: 700;
+		font-size: 14px;
+		line-height: 1.14;
+		letter-spacing: 0.03em;
+		margin-top: 0px;
+		margin-bottom: 10px;
+	}
+}
 
-// @each $icon in antenna, clock, diagram, astronaut {
-// 	.advantages-item--icon-#{$icon}::before {
-// 		background-image: url(../img/#{$icon}.svg);
-// 	}
-// }
+@each $icon in advantages1, advantages2, advantages3, advantages4 {
+	.advantages-item--icon-#{$icon}::before {
+		background-image: url(../../img/icons/advantages/#{$icon}.svg);
+	}
+}
