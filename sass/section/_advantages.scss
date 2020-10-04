@@ -26,8 +26,11 @@
 	}
 }
 
-@each $icon in advantages1, advantages2, advantages3, advantages4 {
-	.advantages-item--icon-#{$icon}::before {
-		background-image: url(../../img/icons/advantages/#{$icon}.svg);
-	}
+// @each $icon in advantages1, advantages2, advantages3, advantages4 {
+// 	.advantages-item--icon-#{$icon}::before {
+// 		background-image: url(../../img/icons/advantages/#{$icon}.svg);
+// 	}
+// }
+.advantages-item--icon-advantages1::before {
+	background-image: url(../../img/icons/advantages/advantages1.svg);
 }
