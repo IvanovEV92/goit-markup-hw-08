@@ -1,26 +1,30 @@
-// .filters {
+.filters {
+	display: flex;
+	justify-content: center;
+	font-family: inherit;
+	padding-top: 60px;
+	padding-bottom: 40px;
+	font-size: 16px;
+	line-height: 1.63;
+	text-align: center;
+	letter-spacing: 0.03em;
 
-// 	font-family: inherit;
-// 	
-// 	font-size: 16px;
-// 	line-height: 1.63;
-// 	text-align: center;
-// 	letter-spacing: 0.03em;
-// 	display: flex;
+	&__btn-list {
+		display: flex;
+		flex-wrap: wrap;
 
-// 	&__btn-list {
-		
-// 		font-family: inherit;
-// 		
-// 		font-size: 16px;
-// 		line-height: 1.63;
-// 		text-align: center;
-// 		letter-spacing: 0.03em;
-// 		display: flex;
-// 	}
-// }
+		font-family: inherit;
 
-// .portfolio__card-list {
-	
-// 	margin-top: 34px;
-// }
+		font-size: 16px;
+		line-height: 1.63;
+		text-align: center;
+		letter-spacing: 0.03em;
+	}
+
+}
+
+.portfolio {
+	&__card-list {
+		padding-bottom: 60px;
+	}
+}

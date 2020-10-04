@@ -39,6 +39,7 @@
 .header-nav {
 	@media screen and (min-width: 768px) {
 		display: flex;
+		align-items: center;
 	}
 	@media screen and (max-width: 767px) {
 		position: absolute;
@@ -52,6 +53,7 @@
 
 		text-align: center;
 	}
+
 	&.menu--is-open {
 		transform: translateY(0%);
 		box-shadow: 0px 4px 8px rgba(0, 0, 0, 0.04), 0px 2px 4px rgba(0, 0, 0, 0.08), 0px 1px 3px rgba(0, 0, 0, 0.16);
@@ -103,13 +105,15 @@
 
 	@media screen and (min-width: 768px) {
 		display: flex;
+		margin-left: 88px;
 		&__item:not(:last-child) {
 			margin-right: 50px;
 		}
 
 		&__link {
-			padding-top: 24px;
-			padding-bottom: 29px;
+			display: inline-block;
+			padding-top: 36px;
+			padding-bottom: 31px;
 		}
 	}
 }

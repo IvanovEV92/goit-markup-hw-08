@@ -2,6 +2,8 @@
 	display: flex;
 
 	background-color: $white;
+	outline: 1px solid #ececec;
+	z-index: 999;
 	@media screen and (max-width: 767px) {
 		position: fixed;
 		top: 0;
@@ -9,9 +11,11 @@
 		align-items: center;
 		justify-content: space-between;
 	}
-	@media screen and (max-width: 1199px) {
+	@media screen and (min-width: 768px) {
 		position: fixed;
 		top: 0;
 		height: 80px;
+		display: flex;
+		align-items: center;
 	}
 }

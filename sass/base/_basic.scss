@@ -41,10 +41,14 @@ img {
 	margin-left: auto;
 	padding-left: 15px;
 	padding-right: 15px;
+	
 }
 .page-main {
-	@media screen and (max-width: 768px) {
+	@media screen and (max-width: 767px) {
 		padding-top: 60px;
+	}
+	@media screen and (min-width: 768px) {
+		padding-top: 80px;
 	}
 }
 .no-padding {
@@ -68,7 +72,11 @@ img {
 // 	align-items: center;
 // }
 
-p, h1, h2, h3, h4 {
+p,
+h1,
+h2,
+h3,
+h4 {
 	margin-top: 0px;
 	margin-bottom: 0px;
 }

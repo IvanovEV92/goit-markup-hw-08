@@ -1,7 +1,4 @@
 .contacts-list {
-	&__item:first-child {
-		margin-bottom: 16px;
-	}
 	&__link {
 		color: $color-secondary-text;
 		transition-duration: 250ms;
@@ -28,5 +25,11 @@
 		margin-top: 60px;
 		margin-bottom: 60px;
 		font-size: 18px;
+		&__item:first-child {
+			margin-bottom: 16px;
+		}
+	}
+	@media screen and (min-width: 768px) {
+		margin-left: 84px;
 	}
 }
