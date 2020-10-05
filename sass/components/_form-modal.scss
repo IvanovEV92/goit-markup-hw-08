@@ -5,7 +5,6 @@
 	letter-spacing: 0.03em;
 	color: $color-secondary-text;
 	z-index: 7;
-	
 
 	&__title {
 		margin-top: 0;
@@ -23,6 +22,9 @@
 		position: relative;
 		flex-direction: column;
 		margin-bottom: 10px;
+		&:focus-within {
+			color: $accent;
+		}
 	}
 	&__name {
 		font-style: normal;

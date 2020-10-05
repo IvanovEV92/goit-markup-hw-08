@@ -8,7 +8,7 @@
 		<link rel="stylesheet" href="./css/main.min.css" />
 		<title>WebStudio</title>
 	</head>
-	<body class="page">
+	<body class="page" data-overflow>
 		<!-- Шапка сайта  -->
 		<header class="page-header header no-padding header--border">
 			<div class="header-container container">
@@ -407,7 +407,7 @@
 		<!-- Футер -->
 		<footer class="page__footer footer">
 			<div class="container">
-				<div class="footer__information information">
+				<div class="footer__item information">
 					<a href="" lang="en" class="information__logo logo logo--color link"><span class="logo--accent">Web</span>Studio</a>
 					<address class="information__list">
 						<p class="information__adress">г. Киев, пр-т Леси Украинки, 26</p>
@@ -417,7 +417,7 @@
 				</div>
 				<div class="join">
 					<h3 class="join__title">Присоединяйтесь</h3>
-					<ul class="join__social-network social-network flexbox">
+					<ul class="footer__item social-network flexbox">
 						<li class="social-network__item">
 							<a href="https://www.instagram.com/" target="_blank" class="social-network__link social-network__link--bgc-color"
 								><svg class="social-network__icon social-network__icon--color" width="20" height="20">
@@ -448,7 +448,7 @@
 						</li>
 					</ul>
 				</div>
-				<div class="footer__form-subscription">
+				<div class="footer__item footer__form-subscription">
 					<form action="#" class="form-subscription">
 						<label class="form-subscription__label">
 							<h3 class="form-subscription__title">Подпишитесь на рассылку</h3>
@@ -503,11 +503,13 @@
 						<span class="checkbox__icon"></span>
 						<span class="form-check-in__terms">Соглашаюсь с рассылкой и принимаю <a href="" class="link--policy link">Условия договора</a> </span>
 					</label>
-					<button type="submit" class="button button--center">Отправить</button>
+					<button type="submit" class="button button__submit button--center" disabled>Отправить</button>
 				</form>
 			</div>
 		</div>
 		<script src="./js/modal.js"></script>
 		<script src="./js/menu.js"></script>
+		<script src="./js/body-scroll.js"></script>
+		<script src="./js/button-disabled.js"></script>
 	</body>
 </html>

@@ -1,5 +1,11 @@
 .advantages {
 	padding-top: 60px;
+	&__list {
+		@media screen and (min-width: 768px) {
+			display: flex;
+			flex-wrap: wrap;
+		}
+	}
 	&-item {
 		&::before {
 			content: '';
@@ -9,12 +15,27 @@
 			margin-bottom: 30px;
 			border-radius: 4px;
 
-			background-size: content;
 			background-repeat: no-repeat;
 			background-position: center;
 			background-color: $color-bg-advantges;
 		}
+		@media screen and (max-width: 767px) {
+			&:not(:last-child) {
+				margin-bottom: 30px;
+			}
+		}
+		@media screen and (min-width: 768px) {
+			width: calc((100% - 1 * 30px) / 2);
+
+			&:not(:nth-child(2n)) {
+				margin-right: 30px;
+			}
+			&:not(:nth-last-child(-n + 2)) {
+				margin-bottom: 30px;
+			}
+		}
 	}
+
 	&__title {
 		font-style: normal;
 		font-weight: 700;

@@ -10,6 +10,18 @@
 	.container {
 		padding-top: 0px;
 		padding-bottom: 0px;
+		@media screen and (min-width: 768px) {
+			display: flex;
+			flex-wrap: wrap;
+		}
+	}
+	&__item {
+		@media screen and (min-width: 768px) {
+			width: 100%;
+			&:not(:last-child) {
+				width: 50%;
+			}
+		}
 	}
 }
 .information {
@@ -41,8 +53,6 @@
 }
 
 .join {
-	margin-top: 60px;
-	margin-bottom: 60px;
 	&__title {
 		margin-bottom: 20px;
 		font-style: normal;
@@ -52,5 +62,13 @@
 		letter-spacing: 0.03em;
 		text-transform: uppercase;
 		color: #ffffff;
+	}
+	@media screen and (max-width: 767px) {
+		margin-top: 60px;
+		margin-bottom: 60px;
+	}
+	@media screen and (min-width: 768px) {
+		margin-left: auto;
+		margin-right: 90px;
 	}
 }

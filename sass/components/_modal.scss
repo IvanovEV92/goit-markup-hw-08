@@ -1,5 +1,4 @@
 .backdrop {
-	overflow-y: none;
 	position: fixed;
 	top: 0;
 	left: 0;
@@ -8,7 +7,9 @@
 	visibility: visible;
 
 	background: rgba(0, 0, 0, 0.2);
-	z-index: 6;
+	z-index: 99;
+	overflow-y: auto;
+	overflow-x: hidden;
 }
 
 .backdrop.is-hidden {
@@ -29,18 +30,17 @@
 .modal {
 	display: inline-block;
 	position: absolute;
-	top: 50%;
+	// top: 50%;
 	left: 50%;
 	padding: 40px;
 	width: 528px;
-	transform: translate(-50%, -50%) rotate(360deg) scale(1);
+	transform: translate(-50%, 20%) rotate(360deg) scale(1);
 	transition-duration: 250ms;
 	transition-timing-function: cubic-bezier(0.4, 0, 0.2, 1);
 
 	background-color: #ffffff;
 	box-shadow: 0px 1px 3px rgba(0, 0, 0, 0.12), 0px 1px 1px rgba(0, 0, 0, 0.14), 0px 2px 1px rgba(0, 0, 0, 0.2);
 	border-radius: 4px;
-	overflow: scroll;
 
 	&__close-btn {
 		display: flex;

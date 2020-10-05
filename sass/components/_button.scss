@@ -2,7 +2,7 @@
 	text-align: center;
 	background-color: $accent;
 
-	min-width: 200px;
+	width: 200px;
 	padding: 10px 32px;
 	border-radius: 4px;
 
@@ -34,7 +34,10 @@
 	}
 	// Кнопка в форме подписки
 	&--positon {
-		align-items: center;
+		display: flex;
+		position: relative;
+		left: 50%;
+		transform: translateX(-50%);
 		margin-top: 20px;
 	}
 	&__icon-send {
@@ -48,4 +51,7 @@
 	&:hover &__icon-send {
 		fill: $accent;
 	}
+}
+.button:disabled {
+	background-color: grey;
 }

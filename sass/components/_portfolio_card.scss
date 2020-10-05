@@ -1,5 +1,5 @@
 .card {
-	// width: calc((100% - 2 * 30px) / 3);
+	width: 100%;
 	margin-bottom: 30px;
 	border: 1px solid #eeeeee;
 	&:hover {
@@ -55,6 +55,17 @@
 	}
 	&__img {
 		width: 100%;
+	}
+	@media screen and (min-width: 768px) {
+		width: calc((100% - 1 * 30px) / 2);
+
+		&:not(:nth-child(2n)) {
+			margin-right: 30px;
+		}
+
+		&:not(:last-child) {
+			margin-bottom: 30px;
+		}
 	}
 
 	// &:not(:nth-child(3n)) {
