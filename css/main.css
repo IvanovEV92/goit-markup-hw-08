@@ -147,7 +147,7 @@ h4 {
   font-family: Raleway, sans-serif;
   font-style: normal;
   font-weight: 700;
-  font-size: 26px;
+  font-size: 24px;
   line-height: 1.19;
   z-index: 5;
 }
@@ -215,17 +215,6 @@ h4 {
   fill: #2196f3;
 }
 
-@media screen and (min-width: 768px) {
-  .header-nav {
-    display: -webkit-box;
-    display: -ms-flexbox;
-    display: flex;
-    -webkit-box-align: center;
-        -ms-flex-align: center;
-            align-items: center;
-  }
-}
-
 @media screen and (max-width: 767px) {
   .header-nav {
     position: absolute;
@@ -242,13 +231,37 @@ h4 {
     transition: transform 250ms linear, -webkit-transform 250ms linear;
     text-align: center;
   }
+  .header-nav.menu--is-open {
+    -webkit-transform: translateY(0%);
+            transform: translateY(0%);
+    -webkit-box-shadow: 0px 4px 8px rgba(0, 0, 0, 0.04), 0px 2px 4px rgba(0, 0, 0, 0.08), 0px 1px 3px rgba(0, 0, 0, 0.16);
+            box-shadow: 0px 4px 8px rgba(0, 0, 0, 0.04), 0px 2px 4px rgba(0, 0, 0, 0.08), 0px 1px 3px rgba(0, 0, 0, 0.16);
+  }
 }
 
-.header-nav.menu--is-open {
-  -webkit-transform: translateY(0%);
-          transform: translateY(0%);
-  -webkit-box-shadow: 0px 4px 8px rgba(0, 0, 0, 0.04), 0px 2px 4px rgba(0, 0, 0, 0.08), 0px 1px 3px rgba(0, 0, 0, 0.16);
-          box-shadow: 0px 4px 8px rgba(0, 0, 0, 0.04), 0px 2px 4px rgba(0, 0, 0, 0.08), 0px 1px 3px rgba(0, 0, 0, 0.16);
+@media screen and (max-width: 923px) {
+  .header-nav {
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+    -webkit-box-align: center;
+        -ms-flex-align: center;
+            align-items: center;
+    -webkit-box-pack: justify;
+        -ms-flex-pack: justify;
+            justify-content: space-between;
+  }
+}
+
+@media screen and (min-width: 924px) {
+  .header-nav {
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+    -webkit-box-align: baseline;
+        -ms-flex-align: baseline;
+            align-items: baseline;
+  }
 }
 
 .menu__link {
@@ -301,6 +314,7 @@ h4 {
     display: -ms-flexbox;
     display: flex;
     margin-left: 88px;
+    font-size: 14px;
   }
   .menu__item:not(:last-child) {
     margin-right: 50px;
@@ -313,6 +327,12 @@ h4 {
 }
 
 .contacts-list__link {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
   color: #757575;
   -webkit-transition-duration: 250ms;
           transition-duration: 250ms;
@@ -328,7 +348,7 @@ h4 {
 
 .contacts-list__icon {
   fill: currentColor;
-  margin-right: 10px;
+  margin-right: 8px;
 }
 
 @media screen and (max-width: 767px) {
@@ -342,9 +362,31 @@ h4 {
   }
 }
 
-@media screen and (min-width: 768px) {
+@media screen and (max-width: 923px) {
   .contacts-list {
-    margin-left: 84px;
+    margin-left: 80px;
+    font-size: 12px;
+    letter-spacing: 0.02em;
+  }
+  .contacts-list__item:first-child {
+    margin-bottom: 10px;
+  }
+}
+
+@media screen and (min-width: 924px) {
+  .contacts-list {
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+    -ms-flex-wrap: wrap;
+        flex-wrap: wrap;
+    margin-left: 80px;
+    font-size: 12px;
+    letter-spacing: 0.02em;
+  }
+  .contacts-list__item:first-child {
+    margin-bottom: 0;
+    margin-right: 30px;
   }
 }
 
@@ -380,6 +422,19 @@ h4 {
 @media screen and (min-device-pixel-ratio: 2), screen and (-webkit-min-device-pixel-ratio: 2), screen and (min-resolution: 192dpi), screen and (min-resolution: 2dppx) {
   .hero {
     background-image: url(../img/images/mobile/hero/hero-mobile@2x.jpg);
+  }
+}
+
+@media screen and (min-width: 768px) {
+  .hero {
+    background-image: -webkit-gradient(linear, left top, right top, from(rgba(47, 48, 58, 0.4)), to(rgba(47, 48, 58, 0.4))), url(../img/images/tablet/hero/hero.jpg);
+    background-image: linear-gradient(to right, rgba(47, 48, 58, 0.4), rgba(47, 48, 58, 0.4)), url(../img/images/tablet/hero/hero.jpg);
+  }
+}
+
+@media screen and (min-width: 768px) and (min-device-pixel-ratio: 2), screen and (min-width: 768px) and (-webkit-min-device-pixel-ratio: 2), screen and (min-width: 768px) and (min-resolution: 192dpi), screen and (min-width: 768px) and (min-resolution: 2dppx) {
+  .hero {
+    background-image: url(../../img/images/tablet/hero/hero@2x.jpg);
   }
 }
 
@@ -665,6 +720,9 @@ h4 {
   }
   .clients__card:not(:nth-child(2n)) {
     margin-right: 30px;
+  }
+  .clients__card:not(:nth-last-child(-n + 2)) {
+    margin-bottom: 30px;
   }
 }
 

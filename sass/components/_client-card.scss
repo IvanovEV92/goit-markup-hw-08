@@ -23,12 +23,17 @@
 		}
 		@media screen and (max-width: 767px) {
 			width: calc((100% - 1 * 30px) / 2);
+
 			&:not(:nth-child(2n)) {
 				margin-right: 30px;
 			}
+
+			&:not(:nth-last-child(-n + 2)) {
+				margin-bottom: 30px;
+			}
 		}
 	}
-	
+
 	&__icon {
 		fill: $color-icon-our-clients;
 		transition-duration: 250ms;
