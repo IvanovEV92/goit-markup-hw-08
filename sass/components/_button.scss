@@ -35,10 +35,18 @@
 	// Кнопка в форме подписки
 	&--positon {
 		display: flex;
-		position: relative;
-		left: 50%;
-		transform: translateX(-50%);
-		margin-top: 20px;
+
+		@media screen and (max-width: 1199px) {
+			position: relative;
+			left: 50%;
+			transform: translateX(-50%);
+			margin-top: 20px;
+		}
+		@media screen and (min-width: 1200px) {
+			display: inline-flex;
+			height: 50px;
+			margin-left: 12px;
+		}
 	}
 	&__icon-send {
 		fill: $white;
