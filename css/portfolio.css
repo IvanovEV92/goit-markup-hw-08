@@ -642,7 +642,7 @@ h4 {
   letter-spacing: 0.03em;
 }
 
-@media screen and (max-width: 767px) {
+@media screen and (max-width: 1199px) {
   .card__overlay-text {
     height: 100%;
     padding: 77px 24px;
