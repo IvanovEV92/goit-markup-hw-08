@@ -641,6 +641,10 @@ h4 {
   background-image: url(../img/icons/advantages/advantages4.svg);
 }
 
+.we-are-doing {
+  padding-bottom: 60px;
+}
+
 @media screen and (max-width: 1199px) {
   .we-are-doing {
     display: none;
