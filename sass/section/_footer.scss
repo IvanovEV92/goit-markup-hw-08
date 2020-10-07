@@ -45,6 +45,7 @@
 		margin-bottom: 8px;
 	}
 	&__link {
+		display: inline-block;
 		font-style: normal;
 		font-weight: 400;
 		font-size: 14px;
@@ -59,6 +60,9 @@
 			color: $white;
 		}
 	}
+}
+.information__adress + .information__link {
+	margin-bottom: 9px;
 }
 
 .join {
