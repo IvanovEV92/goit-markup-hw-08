@@ -42,6 +42,7 @@
 		position: absolute;
 		top: 60px;
 		left: 0;
+
 		padding-top: 60px;
 		background-color: $white;
 		transform: translateY(-100%);
@@ -49,6 +50,7 @@
 
 		text-align: center;
 		&.menu--is-open {
+			height: 453px;
 			transform: translateY(0%);
 			box-shadow: 0px 4px 8px rgba(0, 0, 0, 0.04), 0px 2px 4px rgba(0, 0, 0, 0.08), 0px 1px 3px rgba(0, 0, 0, 0.16);
 		}
@@ -96,7 +98,7 @@
 	@media screen and (max-width: 767px) {
 		font-style: normal;
 		font-size: 18px;
-		line-height: 21px;
+		line-height: 1.17;
 		text-align: center;
 		letter-spacing: 0.02em;
 

@@ -34,7 +34,10 @@
 	&__link:focus &__icon {
 		fill: $white;
 	}
-
+	// Отступ иконок в секции команды
+	.social-network__link--position {
+		margin-top: 16px;
+	}
 	// фон кнопок в футере
 	&__link--bgc-color {
 		background-color: $color-ftr-social-link;

@@ -120,7 +120,6 @@ h4 {
   display: -ms-flexbox;
   display: flex;
   background-color: #ffffff;
-  outline: 1px solid #ececec;
   z-index: 55;
 }
 
@@ -156,12 +155,11 @@ h4 {
   .header-container {
     position: static;
     height: 80px;
-    outline: none;
-    border-bottom: 1px solid #ececec;
   }
 }
 
 .logo {
+  display: inline-block;
   color: #212121;
   font-family: Raleway, sans-serif;
   font-style: normal;
@@ -177,18 +175,6 @@ h4 {
 
 .logo--color {
   color: var(--primary-bg-color);
-}
-
-@media screen and (max-width: 767px) {
-  .logo {
-    display: inline-block;
-  }
-}
-
-@media screen and (max-width: 767px) {
-  .logo {
-    display: inline-block;
-  }
 }
 
 .header__btn {
@@ -254,6 +240,7 @@ h4 {
     text-align: center;
   }
   .header-nav.menu--is-open {
+    height: 453px;
     -webkit-transform: translateY(0%);
             transform: translateY(0%);
     -webkit-box-shadow: 0px 4px 8px rgba(0, 0, 0, 0.04), 0px 2px 4px rgba(0, 0, 0, 0.08), 0px 1px 3px rgba(0, 0, 0, 0.16);
@@ -318,7 +305,7 @@ h4 {
   .menu {
     font-style: normal;
     font-size: 18px;
-    line-height: 21px;
+    line-height: 1.17;
     text-align: center;
     letter-spacing: 0.02em;
   }
@@ -355,6 +342,9 @@ h4 {
   -webkit-box-pack: center;
       -ms-flex-pack: center;
           justify-content: center;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
   color: #757575;
   -webkit-transition-duration: 250ms;
           transition-duration: 250ms;
@@ -435,7 +425,7 @@ h4 {
 .hero__title {
   font-weight: 900;
   font-size: 26px;
-  line-height: 1.36;
+  line-height: 1.61;
   letter-spacing: 0.06em;
   text-transform: uppercase;
   margin-bottom: 30px;
@@ -471,7 +461,7 @@ h4 {
 
 @media screen and (min-width: 1200px) and (min-device-pixel-ratio: 2), screen and (min-width: 1200px) and (-webkit-min-device-pixel-ratio: 2), screen and (min-width: 1200px) and (min-resolution: 192dpi), screen and (min-width: 1200px) and (min-resolution: 2dppx) {
   .hero {
-    background-image: url(../img/images/desktop/hero/hero-desktop@2x.jpg);
+    background-image: url(../../img/images/desktop/hero/hero-desktop@2x.jpg);
   }
 }
 
@@ -514,6 +504,9 @@ h4 {
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
 }
 
 @media screen and (max-width: 1199px) {
@@ -528,9 +521,9 @@ h4 {
 
 @media screen and (min-width: 1200px) {
   .button--positon {
-    display: -webkit-inline-box;
-    display: -ms-inline-flexbox;
-    display: inline-flex;
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
     height: 50px;
     margin-left: 12px;
   }
@@ -554,8 +547,13 @@ h4 {
   background-color: grey;
 }
 
+.button:disabled:hover {
+  color: white;
+}
+
 .advantages {
   padding-top: 60px;
+  padding-bottom: 60px;
 }
 
 @media screen and (min-width: 768px) {
@@ -614,6 +612,12 @@ h4 {
   letter-spacing: 0.03em;
   margin-top: 0px;
   margin-bottom: 10px;
+}
+
+@media screen and (max-width: 767px) {
+  .advantages__title {
+    text-align: center;
+  }
 }
 
 .advantages-item--icon-advantages1::before {
@@ -677,21 +681,18 @@ h4 {
   background-color: #f5f4fa;
   padding-top: 60px;
   padding-bottom: 60px;
-  margin-top: 60px;
 }
 
 .team__members {
   margin-top: 30px;
 }
 
-@media screen and (min-width: 768px) {
-  .members {
-    display: -webkit-box;
-    display: -ms-flexbox;
-    display: flex;
-    -ms-flex-wrap: wrap;
-        flex-wrap: wrap;
-  }
+.members {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -ms-flex-wrap: wrap;
+      flex-wrap: wrap;
 }
 
 .members__name {
@@ -706,6 +707,7 @@ h4 {
 }
 
 .members__item {
+  width: 100%;
   margin-bottom: 30px;
   background-color: #ffffff;
   -webkit-box-shadow: 0px 1px 3px rgba(0, 0, 0, 0.12), 0px 1px 1px rgba(0, 0, 0, 0.14), 0px 2px 1px rgba(0, 0, 0, 0.2);
@@ -796,6 +798,10 @@ h4 {
 .social-network__link:hover .social-network__icon,
 .social-network__link:focus .social-network__icon {
   fill: #ffffff;
+}
+
+.social-network .social-network__link--position {
+  margin-top: 16px;
 }
 
 .social-network__link--bgc-color {
@@ -918,6 +924,9 @@ h4 {
     display: -webkit-box;
     display: -ms-flexbox;
     display: flex;
+    -webkit-box-align: baseline;
+        -ms-flex-align: baseline;
+            align-items: baseline;
     -ms-flex-wrap: wrap;
         flex-wrap: wrap;
     text-align: center;
@@ -956,6 +965,7 @@ h4 {
   line-height: 1.71;
   font-style: normal;
   color: var(--white-text-color);
+  margin-bottom: 8px;
 }
 
 .information__link {
@@ -1016,6 +1026,7 @@ h4 {
     -webkit-box-direction: normal;
         -ms-flex-direction: column;
             flex-direction: column;
+    margin-top: 60px;
   }
 }
 
@@ -1282,6 +1293,7 @@ h4 {
 
 .form-check-in__terms {
   font-size: 12px;
+  font-weight: 400;
   letter-spacing: 0.03em;
 }
 

@@ -19,7 +19,7 @@
 	&__title {
 		font-weight: 900;
 		font-size: 26px;
-		line-height: 1.36;
+		line-height: 1.61;
 		letter-spacing: 0.06em;
 		text-transform: uppercase;
 		margin-bottom: 30px;
@@ -51,7 +51,7 @@
 			screen and (-o-min-device-pixel-ratio: 2/1),
 			screen and (min-resolution: 192dpi),
 			screen and (min-resolution: 2dppx) {
-			background-image: url(../img/images/desktop/hero/hero-desktop@2x.jpg);
+			background-image: url(../../img/images/desktop/hero/hero-desktop@2x.jpg);
 		}
 	}
 }

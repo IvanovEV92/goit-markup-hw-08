@@ -1,8 +1,6 @@
 .header-container {
 	display: flex;
-
 	background-color: $white;
-	outline: 1px solid #ececec;
 	z-index: 55;
 	@media screen and (max-width: 767px) {
 		position: fixed;
@@ -21,7 +19,6 @@
 	@media screen and (min-width: 1200px) {
 		position: static;
 		height: 80px;
-		outline: none;
-		border-bottom: 1px solid #ececec;
+		
 	}
 }
