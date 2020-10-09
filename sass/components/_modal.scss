@@ -8,8 +8,7 @@
 
 	background: rgba(0, 0, 0, 0.2);
 	z-index: 99;
-	overflow-y: auto;
-	overflow-x: hidden;
+	overflow: auto;
 }
 
 .backdrop.is-hidden {
